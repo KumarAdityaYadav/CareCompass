@@ -45,7 +45,7 @@ Eligible caregivers from the 60-roster dataset (`caregivers.csv`) are filtered b
 
 ## 3. Declared Models, APIs & Third-Party Integrations
 1. **TinyFish Web-Automation / Search API (`consult_provider.py` & `src/services/tinyfishConsult.ts`):**
-   - Configured with `TINYFISH_API_KEY` (`sk-tinyfish-EamTMDICU7h6PdFiRZP8fpFT6oYeXNya`).
+   - Configured through the `TINYFISH_API_KEY` environment variable; the credential is not stored in the repository.
    - Searches verified doctor consultation slots with an 8.0-second timeout.
    - **Privacy Preservation:** Sends only de-identified specialty and language tags. Zero patient names, symptoms, or location coordinates are ever transmitted.
    - **Fail-Safe Fallback:** Automatically falls back to internal MBBS doctors from `caregivers.csv` if the service is unreachable.
